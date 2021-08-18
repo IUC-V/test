@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+  <meta charset="UTF-8">
+  <title>Corona Testing</title>
+  <!-- link stylesheet file -->
+  <link rel="stylesheet" href="./stylesheets/formStyle.css">
+</head>
+
+<body>
+  <!-- Navigation Bar with menu items -->
+  <div id="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="coronatesting.html">Corona Testing</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Heading on top of the form -->
+  <div class="regform">
+    <h1>Information Form</h1>
+  </div>
+
+  <!-- Main form -->
+  <div class="main">
+    <form id="testForm">
+      <!-- input elements of the form -->
+      <div id="name">
+        <h2 class="name">Name</h2>
+        <input id="firstname" type="text" required name="first_name"><br>
+        <label id="firstlabel"> first name</label>
+        <input id="lastname" type="text" required name="last_name"><br>
+        <label id="lastlabel"> last name</label>
+        <!-- add input and label for last name -->
+
+
+      </div>
+    <h2 class="name">Profession</h2>
+    <input id="profession" type="text" placeholder="student/teacher" name="profession">
+   
+    <h2 class="name">Email</h2>
+    <input id="email" type="text" required name="email">
+    <h2 class="name">Date of Birth</h2>
+    <input id="dateofbirth" type="date" required name="dateofbirth">
+
+    <h2 class="name">Mobile Number</h2>
+    <input id="mobile" type="mobile"  name="mobile" required pattern="[789][0-9]{9}">
+
+  <h2 class="name">Province/Territory</h2>
+   <select id="province" name="province">
+   <option disabled="disabled" required selected="selected">--choose</option>
+   <option>Ontario</option>
+   <option>Quebec</option>
+   <option>Saskatchewan</option>
+   <option>New Brunswick</option>
+   <option>Nova Scotia</option>
+   <option>Prince Edward's Island</option>
+   <option>Newfoundland and Labrador</option>
+   <option>British Columbia</option>
+   <option>Alberta</option>
+   <option>Manitoba</option>
+   <option>Northwest Territories</option>
+   <option>Nunavut</option>
+   <option>Yukon</option>
+   </select>
+
+   <h2 id="travel">Have you travelled to a COVID-affected country within the last month</h2>
+   <div id="travel">
+      <input type="radio" name="option" value="Yes"> Yes
+      <input type="radio" name="option" value="No"> No
+  </div>
+
+  <h2 id="symptoms">Do you have any of the following symptoms?</h2>
+  <div class="arrange">
+  <input type="checkbox" name="symptoms" value="Fever" id="cb1">
+  <label for="cb1">Fever</label><br>
+  <input type="checkbox" name="symptoms" value="Dry Cough" id="cb2">
+  <label for="cb2">Dry Cough</label><br>
+  <input type="checkbox" name="symptoms" value="Cold" id="cb3">
+  <label for="cb3">Cold</label><br>
+  <input type="checkbox" name="symptoms" value="Breathing Issues" id="cb4">
+  <label for="cb4">Breathing Issues</label><br>
+  <input type="checkbox" name="symptoms" value="Chest Pain" id="cb5">
+  <label for="cb5">Chest Pain</label><br>
+  
+  </div>
+
+  <input id="submit" type="submit" onclick="submitForm()">
+
+  <h2 id="centers">Testing Centers Near You: <span id="result"></span><br>
+
+
+    </form>
+  </div>
+
+  <!-- add script files -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+  <!-- add script files -->
+  
+  <script src="./scripts/testingScript.js"></script>
+
+</body>
+
+</html>
